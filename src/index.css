@@ -1,3 +1,5 @@
+@import "./styles/tailwind.css";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.switch {
+  @apply flex items-center rounded-full p-1 bg-gray-100 border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed appearance-none before:absolute before:rounded-full before:bg-white before:border before:border-gray-200 checked:before:border-blue-600 checked:before:bg-blue-500 before:transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-opacity-30 focus-visible:ring-gray-200 focus-visible:border-gray-300 focus-visible:checked:outline-none focus-visible:checked:ring-4 focus-visible:checked:ring-opacity-30 focus-visible:checked:ring-blue-500 focus-visible:checked:border-blue-500;
+}
+
+.input-label {
+  @apply absolute top-1 left-2 bg-transparent text-xs;
+}
+
+.input {
+  @apply w-full border rounded-md appearance-none text-[#222] border-none focus-within:outline-none focus-within:ring-0;
+}
+
+.input-error {
+  @apply outline-none ring-4 ring-opacity-30 border-red-600 ring-red-500 text-red-500;
+}
+
+.btn {
+  @apply font-normal inline-flex items-center justify-center flex-shrink-0 select-none border whitespace-nowrap transform active:scale-95 disabled:opacity-50 disabled:scale-100 disabled:cursor-not-allowed focus-visible:outline-none focus:outline-none active:outline-none;
 }
